@@ -1,1 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BikeRide - Explore With Style</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+      background-color: #f7f7f7;
+    }
+
+    /* Header & Navbar */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: transparent;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      transition: background 0.3s ease;
+    }
+
+    header.scrolled {
+      background-color: #1a1a1a;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #ff5722;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      padding: 10px 16px;
+      border-radius: 5px;
+      transition: 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #ff5722;
+      color: black;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 120px 20px 0;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 100px 40px;
+      text-align: center;
+    }
+
+    section:nth-child(even) {
+      background-color: #e0f7fa;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    .bike-img {
+      margin-top: 30px;
+      width: 90%;
+      max-width: 800px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header id="navbar">
+    <div class="logo">BikeRide</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#models">Models</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <h1>Ride the Roads in Style</h1>
+    <p>Discover the best bikes and enjoy freedom like never before.</p>
+  </section>
+
+  <!-- Bike Models Section -->
+  <section id="models">
+    <h2>Our Bike Models</h2>
+    <p>Choose from a variety of sports, cruisers, and adventure bikes.</p>
+    <img class="bike-img" src="https://images.unsplash.com/photo-1588582430482-c901e8f18a2f?auto=format&fit=crop&w=1400&q=80" alt="bike model">
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <p>Take a look at our stunning rides captured in action.</p>
+    <img class="bike-img" src="https://images.unsplash.com/photo-1571501679680-de32f1e7aad4?auto=format&fit=crop&w=1400&q=80" alt="bike gallery">
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About BikeRide</h2>
+    <p>We are passionate about motorcycles and committed to delivering a thrilling experience to all riders, beginners or pros.</p>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  </script>
+
+</body>
+</html>
