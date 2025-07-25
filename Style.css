@@ -61,7 +61,7 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
   height: 100vh;
-  background: url('https://i.pinimg.com/originals/01/example.jpg') no-repeat center center/cover;
+  background: url('image 6.jpg') no-repeat center center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
