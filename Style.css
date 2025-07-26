@@ -59,7 +59,7 @@ nav ul li a:hover {
 }
 
 /* Hero Section */
-.hero {
+..hero {
   height: 100vh;
   background: url('image 6.jpg') no-repeat center center/cover;
   display: flex;
@@ -70,7 +70,6 @@ nav ul li a:hover {
   text-align: center;
   padding: 120px 20px 0;
 }
-
 .hero h1 {
   font-size: 3.5rem;
   margin-bottom: 20px;
